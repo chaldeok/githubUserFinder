@@ -14,11 +14,13 @@ searchUser.addEventListener('keyup', (e) => {
 				.then(data => {
 					if(data.profile.message === 'Not Found') {
 						// Show alert
+						ui.showAlert('Такой пользователь не найден =(', 'alert alert-danger');
 					} else {
 						ui.showProfile(data.profile)
 					}
 				})
 	} else {
 		// Clear profile
+		ui.clearProfile();
 	}
 });
