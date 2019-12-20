@@ -16,7 +16,9 @@ searchUser.addEventListener('keyup', (e) => {
 						// Show alert
 						ui.showAlert('Такой пользователь не найден =(', 'alert alert-danger');
 					} else {
-						ui.showProfile(data.profile)
+						// Show profile
+						ui.showProfile(data.profile);
+						ui.showRepos(data.repos);
 					}
 				})
 	} else {
